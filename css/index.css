@@ -1,0 +1,10 @@
+@import url('./header.css');
+@import url('./home.css');
+@import url('./activity.css');
+@import url('./about-me.css');
+@import url('./sns.css');
+
+html {
+  margin: 0 auto;
+  max-width: 1440px;
+}

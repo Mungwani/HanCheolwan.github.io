@@ -1,0 +1,134 @@
+#about-me {
+  display: none;
+}
+
+#about-me .mbti p{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+  font-size: 22px;
+}
+
+#about-me #mbtiimg{
+  margin-top: 30px;
+  width: 90%;
+}
+#about-me .mbti-img{
+  display: flex;
+  justify-content: center;
+}
+#about-me .images {
+  display: flex;
+  justify-content: center;
+}
+
+#about-me .images img {
+  margin-top: 70px;
+  width: 23%;
+  margin-right: 20px;
+}
+
+#about-me .letter {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 40px;
+  font-size: 22px;
+}
+#about-me .image img {
+  margin-top: 90px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+#about-me .bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 70px;
+}
+#about-me .bottom p {
+  margin-left: 50px;
+  font-size: 22px;
+
+}
+#about-me .bottom img {
+  width: 20%;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  #about-me .mbti {
+    margin-top: 30px;
+  }
+  #about-me .mbti p{
+    font-size: 17px;
+    margin-top: 30px;
+    line-height: 28px;
+    left: 10%;
+  }
+  #about-me .images {
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  #about-me .images img {
+    width: 45%;
+    margin-right: 10px;
+  }
+  #about-me .images img:nth-child(2) {
+    margin-right: 0px;
+  }
+  #about-me .images img:last-child {
+    width: 60%;
+    margin-top: 20px;
+  }
+  #about-me .letter {
+    font-size: 17px;
+  }
+  #about-me .image {
+    display: flex;
+    justify-content: center;
+  }
+  #about-me .image img {
+    margin-top: 90px;
+    width: 80%;
+  }
+  #about-me .bottom {
+    flex-direction: column;
+    margin-bottom: 70px;
+    margin-top: 10px;
+  }
+  #about-me .bottom p {
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size: 17px;
+    
+  }
+  #about-me .bottom img {
+    margin-top: 30px;
+    width: 30%;
+  }
+}
+@media screen and (max-width: 576px) {
+  #about-me .mbti p {
+   font-size: 15px;
+  }
+  #about-me .letter {
+    font-size: 15px
+  }
+  #about-me .bottom p {
+    font-size: 15px
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  #about-me .mbti p {
+    font-size: 27px;
+  }
+  #about-me .letter {
+    font-size: 27px;
+  }
+  #about-me .bottom p {
+    font-size: 27px;
+  }
+}
+

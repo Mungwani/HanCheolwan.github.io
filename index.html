@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="css/index.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script src="./index.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      var width = $('[data-role="slider"]').attr('data-width');
+      var height = $('[data-role="slider"]').attr('data-height');
+      var count = $('[data-role="slider"] div.item').length;
+      $('[data-role="slider"]').css({
+        position: 'relative', overflow: 'hidden', width: width, height: height
+      })
+        .find('.container').css({
+          position: 'absolute', width: count * width, overflow: 'hidden'
+        })
+        .find('.item').css({
+          width: width, height: height, float: 'left'
+        });
+      var currentPage = 0;
+      var changePage = function () {
+        $('[data-role="slider"] > .container').animate({ left: -currentPage * width }
+          , 500);
+      };
+      $('#left-button').click(function () {
+        if (currentPage > 0) { currentPage--; changePage(); }
+      });
+      $('#right-button').click(function () {
+        if (currentPage < count - 1) { currentPage++; changePage(); }
+      });
+    });
+  </script>
+
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=swap" rel="stylesheet">
+  <style>
+    p {
+      line-height: 35px;
+      font-family: 'Gowun Batang', serif;
+    }
+
+    h1 {
+      font-family: 'Gowun Batang', serif;
+    }
+  </style>
+
+</head>
+
+<body>
+  <section id="home">
+    <header>
+      <div class="waniLogo">
+        <a href="index.html">
+          <image src="./images/WANI.png" style="width: 100px;">
+        </a>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fa-solid fa-align-justify fa-2xl"></i></button>
+        <nav class="dropdown-content">
+          <a href="#home" onclick="visible('home'); invisible('about-me'); invisible('sns'); invisible('activity');"
+            class="home">HOME
+          </a>
+          <a href="#about-me" onclick="visible('about-me'); invisible('home'); invisible('sns'); invisible('activity');"
+            class="about-me">ABOUT ME</a>
+          <a href="#sns" onclick="visible('sns'); invisible('home'); invisible('about-me'); invisible('activity');"
+            class="sns">SNS</a>
+          <a href="#activity" onclick="visible('activity'); invisible('home'); invisible('sns'); invisible('about-me');"
+            class="activity">ACTIVITY</a>
+        </nav>
+      </div>
+    </header>
+    <div class="images">
+      <img src="./images/front.png" />
+      <img src="./images/front1.png" />
+      <img src="./images/front2.png" />
+    </div>
+    <div class="intro">
+      <h1>"Hi, I'm Cheolwan."</h1>
+      <p>안녕하세요, 저는 강원대학교 컴퓨터공학과에 재학 중인 한철완입니다.
+        원주여자고등학교를 졸업한 후 강원대학교에 진학하였습니다.
+        코딩은 중학교 때 처음 접해봤습니다.
+        오또 봇으로 재미있게 배웠던 기억이 컴퓨터공학과를 선택하게 만든 것 같습니다.
+        1학년 때 자바, 파이썬, C언어 등을 배웠고,
+        현재는 html, CSS, 자바스크립트 등을 배우고 있습니다.
+        이중 저는 html, CSS에 가장 흥미가 있습니다.
+        웹페이지를 디자인한 후 그것을 실현하는 것이 뿌듯하기도 하고 재미있기 때문입니다.
+        아직은 부족한 실력이기에 종강한 후에도 CSS를 공부할 예정입니다.
+        이 홈페이지는 웹프로그래밍 수업의 과제로 제작하게 되었습니다.
+      </p>
+      <p></p>
+    </div>
+  </section>
+
+  <section id="about-me">
+    <header>
+      <div class="waniLogo">
+        <a href="index.html">
+          <image src="./images/WANI.png" style="width: 100px;">
+        </a>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fa-solid fa-align-justify fa-2xl"></i></button>
+        <nav class="dropdown-content">
+          <a href="#home" onclick="visible('home');invisible('about-me');invisible('sns');invisible('activity')"
+            class="home">HOME
+          </a>
+          <a href="#about-me" onclick="visible('about-me');invisible('home');invisible('sns');invisible('activity')"
+            class="about-me">ABOUT ME</a>
+          <a href="#sns" onclick="visible('sns');invisible('home');invisible('about-me');invisible('activity')"
+            class="sns">SNS</a>
+          <a href="#activity" onclick="visible('activity');invisible('home');invisible('sns');invisible('about-me')"
+            class="activity">ACTIVITY</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mbti-img">
+      <img src="./images/mbti.png" id="mbtiimg" />
+    </div>
+
+    <div class="mbti">
+      <p>
+        저의 MBTI는 ISFJ입니다. 외향적으로 보일 수도 있지만 저의 본래 모습은 내향적입니다.
+        부끄러움이 많고 어색한 사람과 단둘이 있는 것을 힘들어합니다.
+        주로 상상의 나래를 펼치기보단, 현실적인 생각을 많이 합니다.
+        그리고 감정형이기도 하고, 사고형이기도 합니다.
+        상대를 잘 공감해주지만, 현실적인 답안을 제공하며 친구를 위로해줍니다.
+        자유분방하고 변동이 있는 것 보단 체계적이고 철저한 계획을 좋아합니다.
+
+      </p>
+    </div>
+
+    <div class="images">
+      <img src="./images/p1.png" />
+      <img src="./images/p2.png" />
+      <img src="./images/p3.png" />
+    </div>
+    <div class="letter">
+      <p>
+        저는 1남 1녀 중 장녀로 태어났습니다. 1살 차이 나는 개구쟁이 남동생이 있습니다.
+        어렸을 땐 같이 사진도 많이 찍고 잘 지냈지만 서로 사춘기를 겪는 과정에서
+        말도 안 하고 지낼 때도 있었습니다. 하지만 지금은 같은 대학교로 진학해
+        종종 같이 밥도 먹고 사진도 찍는 사이 좋은 남매입니다.
+      </p>
+    </div>
+    <div class="image">
+      <img src="./images/p4.png" />
+    </div>
+    <div class="bottom">
+      <p>
+        저는 현재 제 3대 컴퓨터공학과 학생회 UNI:C의 미디어 차장을 맡고 있습니다.
+        미디어부는 월별 달력과 과 행사 관련 포스터를 제작하는 부서입니다.
+        아래의 사진은 미디어부에서 제작한 학생회의 로고입니다.
+        학생회 활동을 하면서 다양한 사람들도 많이 만나고
+        같은 과 선후배 동기들도 많이 만나면서 즐거운 학교생활을 하고 있습니다.
+        작년에는 참여자 입장으로 있었지만 직접 기획하고 진행하는 입장이 되니 여러 어려움이 있었지만
+        다 같이 극복해나가는 과정이 정말 좋은 추억이 될 것 같습니다.
+
+      </p>
+      <img src="./images/logo.png" />
+    </div>
+  </section>
+
+  <section id="sns">
+    <header>
+      <div class="waniLogo">
+        <a href="index.html">
+          <image src="./images/WANI.png" style="width: 100px;">
+        </a>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fa-solid fa-align-justify fa-2xl"></i></button>
+        <nav class="dropdown-content">
+          <a href="#home" onclick="visible('home');invisible('about-me');invisible('sns');invisible('activity')"
+            class="home">HOME
+          </a>
+          <a href="#about-me" onclick="visible('about-me');invisible('home');invisible('sns');invisible('activity')"
+            class="about-me">ABOUT ME</a>
+          <a href="#sns" onclick="visible('sns');invisible('home');invisible('about-me');invisible('activity')"
+            class="sns">SNS</a>
+          <a href="#activity" onclick="visible('activity');invisible('home');invisible('sns');invisible('about-me')"
+            class="activity">ACTIVITY</a>
+        </nav>
+      </div>
+    </header>
+    <div class="title">
+      <img src="./images/instagram.png" />
+      <h1>
+        삐식이의 컴공 생존기
+        <a href="https://www.instagram.com/bbi.sik_/" target="_blank">@bbi.sik_</a>
+      </h1>
+    </div>
+    <div class="title-intro">
+      <p>
+        삐식이라는 캐릭터로 저의 대학 생활을 담고 있습니다.
+        처음에는 인스타툰처럼 운영하려 했지만, 저의 부족한 그림 실력과 시간이 너무 오래 걸리는 관계로
+        일상 사진에 삐식이를 그려 넣는 방식으로도 운영하고 있습니다.
+        시작한 지 얼마 되지 않았지만, 종종 업로드하고 있습니다. 
+        DM으로 컴공 진학 관련, 수업 관련 질문도 들어와 친절하게 답변도 하곤 합니다.
+        위의 인스타 아이디를 클릭하면 삐식이 계정으로 이동됩니다.
+      </p>
+    </div>
+    <div class="bbisiks">
+      <img src="./images/bbisiks.png" />
+    </div>
+    <div class="bbisiks-intro">
+      <p>
+        위의 사진들은 인스타에 업로드한 사진들입니다. 그림체가 매번 달라지지만
+        코딩 병아리라는 컨셉으로 병아리 캐릭터로 유지하고 있습니다.
+        추후 계획은 저의 고군분투하던 1학년 생활을 차근차근 담아보려 합니다.
+        계정이 더 커진다면 컴공 진학 관련 Q&A나 독자들에게 도움이 될 만한 것들을
+        풀어나가고 싶습니다.
+      </p>
+    </div>
+    <div class="bbisik">
+      <img src="./images/bbisik.jpg" />
+    </div>
+  </section>
+
+  <section id="activity">
+    <header>
+      <div class="waniLogo">
+        <a href="index.html">
+          <image src="./images/WANI.png" style="width: 100px;">
+        </a>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fa-solid fa-align-justify fa-2xl"></i></button>
+        <nav class="dropdown-content">
+          <a href="#home" onclick="visible('home');invisible('about-me');invisible('sns');invisible('activity')"
+            class="home">HOME
+          </a>
+          <a href="#about-me" onclick="visible('about-me');invisible('home');invisible('sns');invisible('activity')"
+            class="about-me">ABOUT ME</a>
+          <a href="#sns" onclick="visible('sns');invisible('home');invisible('about-me');invisible('activity')"
+            class="sns">SNS</a>
+          <a href="#activity" onclick="visible('activity');invisible('home');invisible('sns');invisible('about-me')"
+            class="activity">ACTIVITY</a>
+        </nav>
+      </div>
+    </header>
+    <div class="topcit-title">
+      <h1>2021년 SW 학습공동체 – TOPCIT 준비반</h1>
+    </div>
+    <div class="topcit-img">
+      <img src="./images/topcit.png" />
+    </div>
+    <div class="topcit-intro">
+      <p>
+        선배들의 권유로 학습공동체를 진행하게 되었습니다.
+        TOPCIT이라는 소프트웨어 역량 검정이 있다는 걸 이번 활동을 통해 알게 되었습니다.
+        과 동기, 선배들과 함께 줌으로 스터디도 하고 좋은 경험을 하였습니다.
+        모르는 것들을 물어보면 친절하게 답해주셔서 감사했고 저도 나중에 그런 선배가 되고 싶다고 생각했습니다.
+        한 가지 아쉬웠던 점은 시험 당일날 서버 문제로 시험을 제대로 치루지 못했습니다.
+        문제가 안 넘어가고 에러가 나서 앞에 몇 문제만 풀고 시험 도중에 나오게 되었습니다.
+        그래서 저의 역량을 제대로 파악할 순 없었지만 좋은 경험이라고 생각합니다.
+      </p>
+    </div>
+    <div class="prize-title">
+      <h1>2021년 SW 학습 활동 수기 공모전 – SW학습부문 장려상</h1>
+    </div>
+
+    <div class="prize-img">
+      <input type="radio" name="slide" id="prize1" checked>
+      <input type="radio" name="slide" id="prize2">
+      <input type="radio" name="slide" id="prize3">
+      <input type="radio" name="slide" id="prize4">
+      <input type="radio" name="slide" id="prize5">
+      <input type="radio" name="slide" id="prize6">
+      <input type="radio" name="slide" id="prize7">
+      <input type="radio" name="slide" id="prize8">
+
+      <div class="bullets">
+        <label for="prize1">&nbsp;</label>
+        <label for="prize2">&nbsp;</label>
+        <label for="prize3">&nbsp;</label>
+        <label for="prize4">&nbsp;</label>
+        <label for="prize5">&nbsp;</label>
+        <label for="prize6">&nbsp;</label>
+        <label for="prize7">&nbsp;</label>
+        <label for="prize8">&nbsp;</label>
+      </div>
+      <ul id="imgholder" class="imgs">
+        <li><img src="./images/prize1.png"></li>
+        <li><img src="./images/prize2.png"></li>
+        <li><img src="./images/prize3.png"></li>
+        <li><img src="./images/prize4.png"></li>
+        <li><img src="./images/prize5.png"></li>
+        <li><img src="./images/prize6.png"></li>
+        <li><img src="./images/prize7.png"></li>
+        <li><img src="./images/prize8.png"></li>
+      </ul>
+
+    </div>
+
+   
+
+    <div class="prize-intro">
+      <p>
+        2021년, 학교에서 신입생을 대상으로 입학 전 교육을 진행하였습니다.
+        컴공과에 진학했지만 코딩 병아리이기에 미리 배우고자 파이썬 프로그래밍을 신청하게 되었습니다. 
+        이러닝으로 수업을 듣고 바로 실습을 진행하면서 자기주도 학습하였습니다. 
+        학기 중에 SW 학습 활동 수기 공모전이 있어 입학 전 교육을 주제로 참가해보았습니다. 
+        입학 전 교육이 무엇인지, 듣게 된 이유, 진행방식, 애로사항, 극복 노력 등 저의 이야기를 담아 제작하였습니다. 
+        위의 사진들은 제가 제출했던 카드 뉴스입니다. 
+        운이 좋게도 장려상을 받아 장학금도 같이 받았습니다.
+      </p>
+    </div>
+    <div class="linux-title">
+      <h1>2022년 SW 학습공동체 – 자격증 준비반 리눅스마스터</h1>
+    </div>
+    <div class="linux-intro">
+      <p>
+        올해도 학습공동체를 신청하였습니다.
+        작년과 달리 리눅스 마스터 자격증을 도전해보고자 합니다.
+        지금 리눅스를 배우고 있는데 이 과목 또한 흥미가 있어서 선택하게되었습니다.
+        선배들과 함께 진행하는 거라 많은 도움을 받을 수 있을 것 같습니다. 
+        종강 후에 열심히 공부해서 1, 2차 시험 모두 합격하고 싶습니다.
+
+      </p>
+    </div>
+  </section>
+</body>
+
+</html>

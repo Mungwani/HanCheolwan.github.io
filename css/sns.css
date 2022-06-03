@@ -1,0 +1,91 @@
+#sns {
+  display: none;
+}
+#sns .title {
+  margin-top: 30px;
+  margin-left: 30px;
+  width: calc(60% - 30px);
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+#sns .title h1 {
+  margin-left: 10px;
+  font-size: 31px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+#sns .title h1 a {
+  text-decoration: none;
+  color: rgb(176, 156, 29);
+  font-size: 22px;
+}
+#sns .title-intro {
+  margin-left: 30px;
+  width: calc(60% - 30px);
+}
+#sns .title-intro p {
+  font-size: 20px;
+}
+#sns .bbisiks img {
+  margin-top: 50px;
+  width: calc(60% - 30px);
+  margin-left: 30px;
+}
+#sns .bbisiks-intro {
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  width: calc(60% - 30px);
+  font-size: 20px;
+}
+#sns .bbisik img {
+  width: 40%;
+  position: fixed;
+  top: 100px;
+  right: 0;
+}
+
+@media screen and (max-width: 767px) {
+  #sns .bbisik {
+    display: flex;
+    justify-content: center;
+  }
+  #sns .bbisik img {
+    position: relative;
+  }
+  #sns .title img{
+    width: 80px;
+  }
+
+  #sns .title {
+    width: 80%;
+  }
+  #sns img {
+    width: 100px;
+  }
+  #sns .title h1 {
+    font-size: 24px;
+    line-height: 20px;
+  }
+  #sns .title h1 a{
+    font-size: 16px;
+  }
+  #sns .title-intro {
+    margin-left: 30px;
+    margin-bottom: 0px;
+    width: 80%;
+  }
+  #sns .title-intro p {
+    font-size: 18px;
+  }
+  #sns .bbisiks img {
+    width: 90%;
+    
+  }
+  #sns .bbisiks-intro {
+    width: 80%;
+    font-size: 20px;
+  }
+}

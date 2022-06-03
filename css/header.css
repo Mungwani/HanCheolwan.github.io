@@ -1,0 +1,96 @@
+header {
+  width: 100%;
+  margin: 0 auto;
+  height: 60px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid black;
+  padding: 0 10px 7px 10px;
+}
+header h1 {
+  font-weight: 700;
+  font-size: 40px;
+  
+}
+header .dropbtn {
+  display: none;
+}
+header .dropdown nav {
+  display: flex;
+}
+header .dropdown nav a {
+  color: black;
+  text-decoration: none;
+  border-right: 1px solid black;
+  padding: 0 10px;
+  font-size: 18px;
+}
+header .dropdown nav a:first-child {
+  font-weight: 700;
+}
+header .dropdown nav a:last-child {
+  border: none;
+}
+
+@media screen and (max-width: 767px) {
+  header {
+    height: 60px;
+    padding: 0 10px 0px 10px;
+  }
+  header .waniLogo {
+    margin-bottom: 7px;
+  }
+  header .dropdown .dropbtn {
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    border: none;
+    display: block;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 85px;
+    margin-right: 10px;
+  }
+
+  header .dropdown {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  header .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    /* right: 0; */
+    background-color: #f1f1f1;
+    width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    
+  }
+
+  header .dropdown .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+    border: none;
+    
+  }
+
+  header .dropdown .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  header .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  
+}
